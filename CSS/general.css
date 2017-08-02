@@ -22,8 +22,14 @@ h3{
 div#color.container {
 	background-color: #0f006f;
     border-color: #030033;
+}
 
-
+.navbar {
+  margin: 0px 0;
+}
+.navbar-default {
+background-color: #fff;
+border-color: #fff;
 }
 
 
