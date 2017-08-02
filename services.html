@@ -93,7 +93,12 @@
        <img id ="firstImage" src="images/GatewayImages/IMG_7041.JPG" alt="Exit 9 Warehouse">
   <h3>Wine and Liquor Samplings</h3>
       <p>We provide experienced Samplers that do in store and off premise wine and liquor samplings. Our team members set up inviting tables that will draw customers over for a quick taste! Over the last few years we've been able to increase profits for wine and liquor products through these samplings. This is a great way to spark interest for your product!  </p>
-  
+ <h4> <a href="images/GatewayImages/IMG_7041.JPG" data-toggle="lightbox"
+    href="images/GatewayImages/IMG_7041.JPG" data-toggle="lightbox"
+    
+ role="button"> View our Sampling setups! &raquo;</a></h4>
+
+
         
       </div>
 
@@ -132,6 +137,18 @@
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+
+
+
   </body>
 </html>
 
