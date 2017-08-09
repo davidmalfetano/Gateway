@@ -53,12 +53,25 @@ font-family: "Open Sans";
 
 }
 div#noPadding.jumbotron{
-
+background-color: #F9B533;
     padding:0;
     margin:0;
-    background-color: #F9B533;
+     text-align: center
+    
 
 }
+
+
+
+div#icons.jumbotron{
+
+     background-color: #ffffff;
+    padding:0;
+    margin:0;
+     text-align: center
+
+}
+
 
 li.active
 {
@@ -96,6 +109,16 @@ font-size: 18px;
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*
 <-------------------------------------------- End Index Page CSS  ------------------------->
 */
@@ -111,9 +134,15 @@ Gateway Promotion About Us
 */
 
 
+
+
+
 img#firstImage {
+    border-radius: 25px;
     float: right;
     margin-bottom: 200 px;
+    border: 20px solid transparent;
+    border-color: #EA6A41
 
    
 }
@@ -126,12 +155,45 @@ h2{
     text-align: center;
    
 }
+h2.headerFont{
+  color:#F9B533;
+  font-family: "Open Sans";
+    font-size: 32px;
+   
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center
+   
+}
+
+
+p.fontI{
+
+font-family: "Open Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center
+
+
+
+}
+
+
+
 
 
 div.jumbotron{ 
     resize: both;
     overflow: auto;
     color:  #000000;
+
+}
+div#white.jumbotron{ 
+
+    background-color:  #ffffff ;
 
 }
 
