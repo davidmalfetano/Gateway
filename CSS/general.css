@@ -84,6 +84,13 @@ div#customColor.w3-round {
 
 
 }
+
+div#customColor1.w3-round {
+   background-color:   #F9B533;
+   color:#ffffff;
+
+
+}
 h4#round_Font{
 
 
@@ -270,7 +277,11 @@ a.nav:hover::before, a:focus::before {
 
 
 
+p.center{
 
+  text-align: center;
+
+}
 
 
 
