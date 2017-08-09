@@ -47,6 +47,7 @@ font-family: "Open Sans";
     font-variant: normal;
     font-weight: 400;
     line-height: 20px;
+    text-align: center
 
 
 
@@ -55,7 +56,7 @@ div#noPadding.jumbotron{
 
     padding:0;
     margin:0;
-    color: ;
+    background-color: #F9B533;
 
 }
 
@@ -65,8 +66,33 @@ li.active
 }
 
 
+div#customColor.w3-round {
+   background-color:    #F8F8FF;
 
 
+}
+h4#round_Font{
+
+
+    font-family: Impact, Charcoal, sans-serif;
+
+}
+
+/*
+ Learn more button font on index page
+*/
+p.learnMore_Font{
+
+font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center
+
+
+
+}
 
 
 
@@ -105,6 +131,7 @@ h2{
 div.jumbotron{ 
     resize: both;
     overflow: auto;
+    color:  #000000;
 
 }
 
