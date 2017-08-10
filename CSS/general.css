@@ -92,8 +92,14 @@ div#customColor.w3-round {
 div#customColor1.w3-round {
    background-color:   #F9B533;
    color:#ffffff;
-
-
+}
+div.desc_left {
+ float: left;
+ max-width: 65%;
+}
+div.desc_right {
+ float: right;
+ max-width: 65%;
 }
 h4#round_Font{
 
@@ -146,16 +152,17 @@ Gateway Promotion About Us
 
 
 
-
-
 img#firstImage {
     border-radius: 25px;
-    float: right;
     margin-bottom: 200 px;
     border: 20px solid transparent;
     border-color: #EA6A41
-
-   
+}
+img.float_left {
+    float: left;
+}
+img.float_right {
+    float: right;
 }
 h1{
     text-align: center;
@@ -187,13 +194,7 @@ font-family: "Open Sans";
     font-weight: 400;
     line-height: 20px;
     text-align: center
-
-
-
 }
-
-
-
 
 
 
@@ -301,6 +302,18 @@ p.center{
 p.padding{
 
     padding: 10px;
+}
+
+/* START CSS FOR MEDIA QUERIES */
+@media only screen and (max-width: 790px) {
+    div.desc_left {
+ float: left;
+ max-width: 55%;
+}
+div.desc_right {
+ float: right;
+ max-width: 55%;
+}
 }
 
 
