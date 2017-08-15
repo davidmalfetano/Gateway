@@ -97,14 +97,7 @@ div#customColor1.w3-round {
    background-color:   #F9B533;
    color:#ffffff;
 }
-div.desc_left {
- float: left;
- max-width: 65%;
-}
-div.desc_right {
- float: right;
- max-width: 65%;
-}
+
 h4#round_Font{
 
 
@@ -164,9 +157,14 @@ img#firstImage {
 }
 img.float_left {
     float: left;
+    padding-right: 30px;
 }
 img.float_right {
     float: right;
+}
+img.center {
+    display: block;
+    margin: 0 auto;
 }
 h1{
     text-align: center;
@@ -310,14 +308,7 @@ p.padding{
 
 /* START CSS FOR MEDIA QUERIES */
 @media only screen and (max-width: 790px) {
-    div.desc_left {
- float: left;
- max-width: 55%;
-}
-div.desc_right {
- float: right;
- max-width: 55%;
-}
+
 }
 
 
