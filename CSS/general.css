@@ -75,10 +75,6 @@ div#icons.jumbotron{
     margin:0;
      text-align: center
 }
-#services
-{
-    padding: 0 50px 20px 50px;
-}
 
 
 li.active
@@ -97,7 +93,14 @@ div#customColor1.w3-round {
    background-color:   #F9B533;
    color:#ffffff;
 }
-
+div.desc_left {
+ float: left;
+ max-width: 65%;
+}
+div.desc_right {
+ float: right;
+ max-width: 65%;
+}
 h4#round_Font{
 
 
@@ -151,6 +154,7 @@ Gateway Promotion About Us
 
 img#firstImage {
     border-radius: 25px;
+    margin-bottom: 200 px;
     border: 20px solid transparent;
     border-color: #EA6A41
 }
@@ -159,10 +163,6 @@ img.float_left {
 }
 img.float_right {
     float: right;
-}
-img.center {
-    display: block;
-    margin: 0 auto;
 }
 h1{
     text-align: center;
@@ -240,6 +240,8 @@ div.gallery img {
     height: auto;
 }
 
+
+
 a.nav:hover, a:focus, a:active {
     color: #999;
     text-decoration: none;
@@ -299,12 +301,19 @@ p.center{
 }
 p.padding{
 
-    padding: 0 30px 0 30px;
+    padding: 10px;
 }
 
 /* START CSS FOR MEDIA QUERIES */
 @media only screen and (max-width: 790px) {
-
+    div.desc_left {
+ float: left;
+ max-width: 55%;
+}
+div.desc_right {
+ float: right;
+ max-width: 55%;
+}
 }
 
 
