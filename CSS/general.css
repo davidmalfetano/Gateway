@@ -34,6 +34,10 @@ h4.Title
 {
 font-family: 'Dosis', sans-serif;
 }
+h3.left_align {
+    text-align: left;
+}
+
 div#color.container {
 	background-color: #0f006f;
     border-color: #030033;
