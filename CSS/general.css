@@ -214,7 +214,10 @@ div.jumbotron{
 
 
 }
-
+div.services_content {
+margin: 0 auto;
+max-width: 70%;
+}
 
 
 
@@ -309,14 +312,42 @@ p.padding{
 }
 
 /* START CSS FOR MEDIA QUERIES */
-@media only screen and (max-width: 790px) {
-    div.desc_left {
- float: left;
+@media only screen and (max-width: 1150px) {
+      div.desc_left {
  max-width: 55%;
 }
 div.desc_right {
- float: right;
  max-width: 55%;
+}
+div.services_content {
+    max-width: 75%;
+}
+
+}
+
+
+@media only screen and (max-width: 900px) {
+      div.desc_left {
+ max-width: 65%;
+}
+div.desc_right {
+ max-width: 65%;
+}
+div.services_content {
+    max-width: 100%;
+}
+
+}
+
+@media only screen and (max-width: 790px) {
+    div.desc_left {
+ max-width: 55%;
+}
+div.desc_right {
+ max-width: 55%;
+}
+div.services_content {
+    max-width: 100%;
 }
 }
 
