@@ -75,6 +75,10 @@ div#icons.jumbotron{
     margin:0;
      text-align: center
 }
+#services
+{
+    padding: 0 50px 20px 50px;
+}
 
 
 li.active
