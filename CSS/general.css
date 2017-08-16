@@ -223,13 +223,13 @@ div.jumbotron{
 }
 div#services {
     padding-top: 0px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 div#services_special_background {
     padding-top: 0px;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
     background-color: #ffffff;
