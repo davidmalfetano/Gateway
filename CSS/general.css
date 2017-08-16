@@ -210,6 +210,10 @@ font-family: "Open Sans";
 #lessPadding{ 
    padding: 5px 30px 5px 30px;
 }
+#morePadding{ /*logo's div*/
+   padding: 5px 30px 5px 60px;
+   margin: auto;
+}
 div.jumbotron{ 
      padding:10px;
 
@@ -366,7 +370,17 @@ div.services_content {
 }
 }
 
+h2.leftAlign{/*contact page Dave patel */
+ 
+font-family: "Open Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
 
+}
 
 
 
