@@ -186,6 +186,9 @@ img.float_right {
     float: right;
     margin-top: 25px; /* Add this to align title with image */
 }
+img#footer {
+    margin-left: 85px;
+}
 h1{
     text-align: center;
    
@@ -282,16 +285,19 @@ div.gallery img {
 div.footer{
     background-color: #000000;
     height: 100px;
-    margin: 0 auto;
 }
 div.footer_nav {
     color: white;
-    margin: 0 auto;
     text-align: center;
+    color: white;
 }
+div.footer_nav li:not(:first-child):before {
+    content: " | ";
+    padding: 5px;
+}
+
 li.footer {
     display: inline;
-    padding: 10px;
 }
 ul.footer {
     list-style-type: none;
