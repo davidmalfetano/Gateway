@@ -10,8 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href= "https://fonts.googleapis.com/css?family=Corben:bold%7CNobile" rel= "stylesheet" type= "text/css">  
-  <link rel="icon" type="image/ico" href="images/barber.ico">   
-<link rel="shortcut icon" href="css/images/barber.ico"> 
+
 
     <title>Gateway Promotions</title>
 
@@ -51,6 +50,52 @@
   ga('create', 'UA-81350500-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+<!--For LightBox -->
+<script>
+function startLightBox() {
+  var lbBg = document.getElementById("lightBoxBg");
+  var lb = document.getElementById("lightBox");
+
+  lbBg.style.display = "block";
+  lb.style.display   = "block";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+   var slides = document.getElementsByClassName("mySlides");
+   
+
+  if(n > slides.length) { slideIndex = 1}
+
+  if(n < 1) { slideIndex = slides.length}
+
+   for(var i = 0; i < slides.length; i++)
+  {
+    console.log("fuck you");
+    slides[i].style.display = "none";
+  }
+  console.log(slideIndex);
+  slides[slideIndex-1].style.display = "block";
+}
+
+function dismiss() {
+  var lbBg = document.getElementById("lightBoxBg");
+  var lb = document.getElementById("lightBox");
+
+  lbBg.style.display = "none";
+  lb.style.display   = "none";
+}
 </script>
   </head>
 
@@ -99,12 +144,26 @@
         <h3 class = "left_align">Wine and Liquor Samplings</h3>
        <p>
         We provide experienced Samplers that do in store and off premise wine and liquor samplings. Our team members set up inviting tables that will draw customers over for a quick taste! Over the last few years we've been able to increase profits for wine and liquor products through these samplings. This is a great way to spark interest for your product!  </p>
- <p id = "large_font"> <a href="images/GatewayImages/IMG_7041.JPG" data-toggle="lightbox"
- role="button"> View our Sampling setups &raquo;</a></p>
+        <p id = "large_font"><a onclick = "startLightBox();currentSlide(1)"> View our Wine and Liquor Samplings &raquo;</a></p>
 </div>
 <img id ="firstImage" src="images/GatewayImages/IMG_7041.JPG" alt="Exit 9 Warehouse" class = "float_right">
-</div>
+</div> 
 
+
+<div id = "lightBoxBg" onclick = "dismiss()">
+  </div>
+  <div id = "lightBox">
+    
+    <div id = "inline_lightBox">
+    <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
+    <img class = "mySlides" onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
+    <img class = "mySlides" onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
+    <img class = "mySlides" onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+    <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
+    </div>
+
+
+  </div>
         
       </div>
 
