@@ -285,6 +285,7 @@ div.gallery img {
 div.footer{
     background-color: #000000;
     height: 100px;
+    position: relative;
 }
 div.footer_nav {
     color: white;
@@ -294,6 +295,13 @@ div.footer_nav {
 div.footer_nav li:not(:first-child):before {
     content: " | ";
     padding: 5px;
+}
+div.social {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    width: 100%;
+    float: right;
 }
 
 li.footer {
@@ -371,7 +379,39 @@ p.padding{
     padding: 0 0 0 0;
 }
 
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.fa:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #A534C8;
+    color: white;
+}
+
+
+
+
 /* START CSS FOR MEDIA QUERIES */
+
+
 @media only screen and (max-width: 1150px) {
       div.desc_left {
  max-width: 55%;
