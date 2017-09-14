@@ -54,12 +54,21 @@
 </script>
 <!--For LightBox -->
 <script>
+ var slides = [];
 function startLightBox() {
   var lbBg = document.getElementById("lightBoxBg");
   var lb = document.getElementById("lightBox");
 
   lbBg.style.display = "block";
   lb.style.display   = "block";
+
+
+  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
+  
+   for(var k = 1; k < 4; k++) {
+    childImages[k].className = 'mySlides';
+    slides.push(childImages[k]);
+   }
 }
 
 var slideIndex = 1;
@@ -74,21 +83,23 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-   var slides = document.getElementsByClassName("mySlides");
-   
 
-  if(n > slides.length) { slideIndex = 1}
+ //  var slides = document.getElementsByClassName("mySlides");
+   
+  if(n > slides.length) { 
+    
+    slideIndex = 1}
 
   if(n < 1) { slideIndex = slides.length}
 
    for(var i = 0; i < slides.length; i++)
   {
-    console.log("fuck you");
     slides[i].style.display = "none";
   }
   console.log(slideIndex);
   slides[slideIndex-1].style.display = "block";
 }
+
 
 function dismiss() {
   var lbBg = document.getElementById("lightBoxBg");
@@ -96,6 +107,13 @@ function dismiss() {
 
   lbBg.style.display = "none";
   lb.style.display   = "none";
+
+  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
+  
+   for(var k = 1; k < 4; k++) {
+    childImages[k].className = '';
+    slides.pop();
+   }
 }
 </script>
   </head>
@@ -157,9 +175,9 @@ function dismiss() {
     
     <div id = "inline_lightBox">
     <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
-    <img class = "mySlides" onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
-    <img class = "mySlides" onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
-    <img class = "mySlides" onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+    <img  onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
+    <img  onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
+    <img  onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
     <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
     </div>
 
@@ -175,15 +193,28 @@ function dismiss() {
  <h3 class = "left_align">Beer Promotions</h3>
       <p>   
        We provide Promotional Models that know how to peak customer interest into your products. Our promotional models are all outgoing and energtic. They have experience doing spends and giveaways. Along with raffeling of key promo items. Here at Gateway Promotions we have the ability to do multiple events at the same time. Our team will have the whole place drinking your product in no time! </p>
-        <p id = "large_font"> <a href="images/GatewayImages/IMG_7041.JPG" data-toggle="lightbox"
- role="button"> View our Beer Promotions &raquo;</a></p>
-     </div>
-    <img id ="firstImage" src="images/GatewayImages/IMG_7448.JPG" alt="Twisted Tea Promotion" class = "float_left">
+       <p id = "large_font"><a onclick = "startLightBox();currentSlide(1)"> View our Beer Samplings &raquo;</a></p>
+</div>
+<img id ="firstImage" src="images/GatewayImages/IMG_7041.JPG" alt="Exit 9 Warehouse" class = "float_left">
+</div> 
+
+
+<div id = "lightBoxBg lightBoxBg2" onclick = "dismiss()">
   </div>
-   
+  <div id = "lightBox">
+    
+    <div id = "inline_lightBox">
+    <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
+    <img class = "mySlides" onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
+    <img class = "mySlides" onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
+    <img class = "mySlides" onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+    <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
+    </div>
 
-    </div>    
 
+  </div>
+        
+      </div>
 
  <div class="jumbotron" id = "services">
  <div class = "services_content">      
@@ -191,12 +222,27 @@ function dismiss() {
  <h3 class = "left_align">Craft Beer Sampling Team</h3>
       <p>
         We provide Samplers with a wide range of craft beer knowledge. We have worked closely with Switchback and Sierra Nevada to do tastings all around the Capital Region. We have experience going into Supermarkets and Beverage Centers. The energy and product knowledge really allow the customer to feel excited about trying a new taste! </p>
-         <p id = "large_font"> <a href="images/GatewayImages/IMG_7041.JPG" data-toggle="lightbox"
- role="button"> View our Craft Beer Samplings &raquo;</a></p>
-      </div>
+      <p id = "large_font"><a onclick = "startLightBox();currentSlide(1)"> View our Craft Beer Samplings &raquo;</a></p>
+</div>
+<img id ="firstImage" src="images/GatewayImages/IMG_7041.JPG" alt="Exit 9 Warehouse" class = "float_right">
+</div> 
 
-      <img id ="firstImage" src="images/GatewayImages/IMG_7835.PNG" alt="Switchback" class = "float_right">
-      </div>  
+
+<div id = "lightBoxBg lightBoxBg3" onclick = "dismiss()">
+  </div>
+  <div id = "lightBox">
+    
+    <div id = "inline_lightBox">
+    <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
+    <img class = "mySlides" onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
+    <img class = "mySlides" onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
+    <img class = "mySlides" onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+    <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
+    </div>
+
+
+  </div>
+        
       </div>
 
 <br><br><br>
