@@ -55,10 +55,15 @@
 <!--For LightBox -->
 <script>
  var slides = [];
+ 
 function startLightBox() {
+  var scroll = document.body.scrollTop;
   var lbBg = document.getElementById("lightBoxBg");
   var lb = document.getElementById("lightBox");
 
+
+  lbBg.style.top = scroll+"px";
+  lb.style.top   = "calc(25% + "+scroll+"px)";
   lbBg.style.display = "block";
   lb.style.display   = "block";
 
@@ -83,8 +88,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-
- //  var slides = document.getElementsByClassName("mySlides");
    
   if(n > slides.length) { 
     
@@ -96,7 +99,6 @@ function showSlides(n) {
   {
     slides[i].style.display = "none";
   }
-  console.log(slideIndex);
   slides[slideIndex-1].style.display = "block";
 }
 
@@ -116,6 +118,8 @@ function dismiss() {
    }
 }
 </script>
+
+
   </head>
 
   <body>
@@ -172,14 +176,18 @@ function dismiss() {
 <div id = "lightBoxBg" onclick = "dismiss()">
   </div>
   <div id = "lightBox">
-    
-    <div id = "inline_lightBox">
+    <div id = "prevArrow">
     <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
+     </div>
+    <div id = "inline_lightBox">
+    
     <img  onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
     <img  onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
     <img  onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+    <div id = "nextArrow">
     <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
     </div>
+  </div>
 
 
   </div>
@@ -199,17 +207,21 @@ function dismiss() {
 </div> 
 
 
-<div id = "lightBoxBg lightBoxBg2" onclick = "dismiss()">
+<div id = "lightBoxBg" onclick = "dismiss()">
   </div>
   <div id = "lightBox">
     
     <div id = "inline_lightBox">
+    <div id = "prevArrow">
     <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
+    </div>
     <img class = "mySlides" onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
     <img class = "mySlides" onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
     <img class = "mySlides" onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+     <div id = "nextArrow">
     <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
     </div>
+  </div>
 
 
   </div>
@@ -231,14 +243,22 @@ function dismiss() {
 <div id = "lightBoxBg lightBoxBg3" onclick = "dismiss()">
   </div>
   <div id = "lightBox">
+   
+   
     
     <div id = "inline_lightBox">
+
+
+    <div id = "prevArrow">
     <a onclick = "plusSlides(-1)"><img src = "images/leftArrow.png" id = "leftArrow"></a>
+    </div>
     <img class = "mySlides" onclick="currentSlide(1)" src = "images/GatewayImages/IMG_5992.jpg">
     <img class = "mySlides" onclick="currentSlide(2)" src = "images/GatewayImages/IMG_5718.jpg">
     <img class = "mySlides" onclick="currentSlide(3)" src = "images/GatewayImages/IMG_7125.jpg">
+     <div id = "nextArrow">
     <a onclick = "plusSlides(1)"><img src = "images/rightArrow.png" id = "rightArrow" ></a>
     </div>
+  </div>
 
 
   </div>
