@@ -57,13 +57,12 @@
  var slides = [];
  
 function startLightBox() {
-  var scroll = document.body.scrollTop;
+  var top = ($(window).scrollTop() || $("body").scrollTop());
   var lbBg = document.getElementById("lightBoxBg");
   var lb = document.getElementById("lightBox");
 
-
-  lbBg.style.top = scroll+"px";
-  lb.style.top   = "calc(25% + "+scroll+"px)";
+  lbBg.style.top = top+"px";
+  lb.style.top   = "calc(25% + "+top+"px)";
   lbBg.style.display = "block";
   lb.style.display   = "block";
 
