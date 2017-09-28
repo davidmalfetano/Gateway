@@ -146,16 +146,16 @@ font-size: 18px;
 #prevArrow {
     background-color: gray;
     position: absolute;
-    top: 125px;
-    left: 25%;
+    top: 50%;
+    left: 20%;
     border-radius: 5px;
     padding: 1px;
 }
 #nextArrow {
     background-color: gray;
     position: absolute;
-    top: 125px;
-    right: 25%;
+    top: 50%;
+    right: 20%;
     border-radius: 5px;
     padding: 1px;
 }
@@ -170,17 +170,26 @@ font-size: 18px;
     top: 25%;
     display: none;
 }
+#closeBox {
+    position: absolute;
+    top: -30px;
+    right: 20%;
+}
+p.closeBox {
+    color: white;
+}
+p.closeBox:hover {
+    text-decoration: underline;
+}
 
 .mySlides {
     display: none;
-    max-width: 400px;
-    max-height: 400px;
 }
  #inline_lightBox img{
     display: inline-block;
      margin: auto;
-     max-width: 400px;
-     max-height: 400px;
+     max-width: 45%;
+     max-height: 45%;
  }
  #inline_lightBox {
     width: 100%;
@@ -471,6 +480,19 @@ div.desc_right {
 div.services_content {
     max-width: 75%;
 }
+#prevArrow {
+    left: 8%;
+}
+#nextArrow {
+    right: 8%;
+}
+#inline_lightBox img {
+    max-width: 50%;
+    max-height: 50%;
+}
+#closeBox {
+    right: 8%;
+}
 }
 
 
@@ -484,13 +506,6 @@ div.desc_right {
 div.services_content {
     max-width: 100%;
 }
-#prevArrow {
-    left: 15%;
-}
-#nextArrow {
-    right: 15%;
-}
-
 }
 
 @media only screen and (max-width: 790px) {
@@ -502,6 +517,19 @@ div.desc_right {
 }
 div.services_content {
     max-width: 100%;
+}
+#prevArrow {
+    left: 8%;
+}
+#nextArrow {
+    right: 8%;
+}
+#inline_lightBox img {
+    max-width: 60%;
+    max-height: 60%;
+}
+#closeBox {
+    right: 8%;
 }
 }
 
