@@ -357,7 +357,7 @@ div.footer_nav li:not(:first-child):before {
 div.social {
     position: absolute;
     bottom: 50px;
-    right: 10px;
+    right: 35px;
     width: 100%;
     float: right;
 }
