@@ -18,11 +18,12 @@ Index page
 body {
    padding-bottom: 0;
 }
-a#noBorder{
+a.noBorder{
 border-style: none;
 }
-a#noBorder:hover {
-    background-color: #ffffff;
+
+a.noBorder:hover {
+    background-color: lightgray;
 }
 
 h3{
@@ -442,7 +443,7 @@ p.padding{
 
     padding: 10px;
 }
-#browse-pages {
+.browse-pages {
     padding: 0 0 0 0;
 }
 
