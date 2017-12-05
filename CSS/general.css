@@ -220,7 +220,7 @@ Gateway Promotion About Us
 */
 
 div.hero-image {
-    background: url("../images/GatewayImages/New_Photos/IMG_8140.JPG");
+    background: url("images/GatewayImages/New_Photos/IMG_8140.JPG");
     width: 100%;
     background-repeat: no-repeat;
     height: 400px;
@@ -231,7 +231,7 @@ div.hero-image {
    margin-top: -30px;
 }
 div.hero-image2 {
-    background: url("../images/GatewayImages/panorama1.JPG");
+    background: url("images/GatewayImages/panorama1.JPG");
     width: 100%;
     background-repeat: no-repeat;
     height: 400px;
