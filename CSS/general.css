@@ -229,6 +229,8 @@ div.hero-image {
 }
 #chris-work {
    margin-top: -30px;
+   left: 0;
+   margin: 0 auto;
 }
 div.hero-image2 {
     background: url("images/GatewayImages/panorama1.jpg");
@@ -574,6 +576,13 @@ div.services_content {
 div.hero-image, div.hero-image2 {
     max-width: 790px;
     max-height: auto;
+}
+div.social {
+    right: 15px;
+}
+img#footer {
+    max-width: 40%;
+    max-height: 40%;
 }
 }
 
