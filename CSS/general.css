@@ -231,7 +231,7 @@ div.hero-image {
    margin-top: -30px;
 }
 div.hero-image2 {
-    background: url("images/GatewayImages/panorama1.JPG");
+    background: url("images/GatewayImages/panorama1.jpg");
     width: 100%;
     background-repeat: no-repeat;
     height: 400px;
@@ -277,16 +277,16 @@ h2.headerFont{
 
 
 p.fontI{
-
-font-family: "Open Sans";
+    font-family: "Open Sans";
     font-size: 22px;
     font-style: normal;
-
     font-variant: normal;
     font-weight: bold;
     line-height: 20px;
     text-align: center;
     text-color: white;
+    margin: 0 auto;
+    max-width: 90%;
 }
 
 
@@ -475,6 +475,17 @@ p.padding{
 }
 
 
+h2.leftAlign{/*contact page Dave patel */
+ 
+font-family: "Open Sans";
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+}
 
 
 /* START CSS FOR MEDIA QUERIES */
@@ -503,8 +514,20 @@ div.services_content {
 #closeBox {
     right: 8%;
 }
+div.hero-image, div.hero-image2 {
+    max-width: 1150px;
+    max-height: auto;
+}
+a.footer {
+    font-size: 90%;
+}
 }
 
+@media only screen and (max-width: 1000px) {
+    img#gwLogo {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 900px) {
       div.desc_left {
@@ -515,6 +538,13 @@ div.desc_right {
 }
 div.services_content {
     max-width: 100%;
+}
+div.hero-image, div.hero-image2 {
+    max-width: 900px;
+    max-height: auto;
+}
+a.footer {
+    font-size: 80%;
 }
 }
 
@@ -541,19 +571,14 @@ div.services_content {
 #closeBox {
     right: 8%;
 }
+div.hero-image, div.hero-image2 {
+    max-width: 790px;
+    max-height: auto;
+}
 }
 
-h2.leftAlign{/*contact page Dave patel */
- 
-font-family: "Open Sans";
-    font-size: 22px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    line-height: 20px;
-    text-align: left;
 
-}
+
 
 
 
