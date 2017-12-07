@@ -58,6 +58,9 @@ p#large_font {
  font-size: 130%;
  font-weight: bold;
 }
+p#mobileTitle {
+    display: none;
+}
 
 p.font{
 
@@ -581,10 +584,19 @@ div.hero-image, div.hero-image2 {
 }
 #chris-work {
    height: 70%;
-   width: 80%;
+   width: 85%;
 }
 p.fontI {
-    font-size: 90%;
+    font-size: 92%;
+}
+ul.footer {
+    display: none;
+}
+p#mobileTitle {
+    display: block;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    color: white;
 }
 }
 
