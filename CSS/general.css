@@ -220,7 +220,7 @@ Gateway Promotion About Us
 */
 
 div.hero-image {
-    background: url("images/GatewayImages/New_Photos/IMG_8140.JPG");
+    background: url("images/GatewayImages/IMG_8140.JPG");
     width: 100%;
     background-repeat: no-repeat;
     height: 400px;
@@ -516,10 +516,7 @@ div.services_content {
 #closeBox {
     right: 8%;
 }
-div.hero-image, div.hero-image2 {
-    max-width: 1150px;
-    max-height: auto;
-}
+
 a.footer {
     font-size: 90%;
 }
@@ -540,10 +537,6 @@ div.desc_right {
 }
 div.services_content {
     max-width: 100%;
-}
-div.hero-image, div.hero-image2 {
-    max-width: 900px;
-    max-height: auto;
 }
 a.footer {
     font-size: 80%;
@@ -573,16 +566,25 @@ div.services_content {
 #closeBox {
     right: 8%;
 }
-div.hero-image, div.hero-image2 {
-    max-width: 790px;
-    max-height: auto;
-}
 div.social {
     right: 15px;
 }
 img#footer {
     max-width: 40%;
     max-height: 40%;
+}
+div.hero-image, div.hero-image2 {
+    width: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
+}
+#chris-work {
+   height: 70%;
+   width: 80%;
+}
+p.fontI {
+    font-size: 90%;
 }
 }
 
