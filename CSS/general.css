@@ -258,7 +258,7 @@ img.float_right {
     margin-top: 25px; /* Add this to align title with image */
 }
 img#footer {
-    margin-left: 85px;
+    margin: 0 auto;
 }
 h1{
     text-align: center;
@@ -358,6 +358,7 @@ div.gallery img {
 div.footer{
     background-color: #000000;
     height: 100px;
+    width: 100%;
     position: relative;
 }
 div.footer_nav {
@@ -597,6 +598,16 @@ p#mobileTitle {
     text-align: center;
     font-family: 'Dosis', sans-serif;
     color: white;
+}
+div#footer_left {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+div#footer_right {
+    width: 50%;
+    float: right;
+    text-align: center;
 }
 }
 
