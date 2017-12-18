@@ -273,7 +273,6 @@ h2.headerFont{
   color:#F9B533;
   font-family: "Open Sans";
     font-size: 32px;
-   
     font-weight: 400;
     line-height: 20px;
     text-align: center;
@@ -530,6 +529,7 @@ a.footer {
     img#gwLogo {
         display: none;
     }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -544,6 +544,10 @@ div.services_content {
 }
 a.footer {
     font-size: 80%;
+}
+#chris-work {
+   height: 70%;
+   width: 75%;
 }
 }
 
@@ -585,10 +589,10 @@ div.hero-image, div.hero-image2 {
 }
 #chris-work {
    height: 70%;
-   width: 85%;
+   width: 95%;
 }
 p.fontI {
-    font-size: 92%;
+    font-size: 94%;
 }
 ul.footer {
     display: none;
@@ -598,6 +602,7 @@ p#mobileTitle {
     text-align: center;
     font-family: 'Dosis', sans-serif;
     color: white;
+    font-size: 95%;
 }
 div#footer_left {
     width: 50%;
@@ -607,6 +612,62 @@ div#footer_left {
 div#footer_right {
     width: 50%;
     float: right;
+    text-align: center;
+}
+div.gallery {
+    width: 90px;
+}
+h2.headerFont{
+    line-height: 0px;
+}
+div.footer {
+height: 90px;
+}
+div.social {
+bottom: 30px;
+}
+img#footer {
+    padding-top: 15px;
+}
+div.desc_left {
+float: none;
+margin: 0 auto;
+text-align: center;
+max-width: 90%;
+}
+div.desc_right {
+    float: none;
+    margin: 0 auto;
+text-align: center;
+max-width: 90%;
+
+}
+img#firstImage {
+   margin-right: 0;
+   margin-left: 0;
+   float: none;
+   display: inline-block;
+}
+div.services_content {
+max-width: 100%;
+text-align: center;
+}
+h3.left_align {
+    text-align: center;
+}
+img.float_left {
+    float: none;
+    margin-top: 25px; /* Add this to align title with image */
+}
+img.float_right {
+    float: none;
+    margin-top: 25px; /* Add this to align title with image */
+}
+p.padding {
+    text-align: center;
+}
+
+h2.leftAlign{/*contact page Dave patel */
     text-align: center;
 }
 }
