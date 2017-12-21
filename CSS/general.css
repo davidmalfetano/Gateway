@@ -553,6 +553,10 @@ a.footer {
    height: 70%;
    width: 75%;
 }
+h3.left_align {
+    text-align: center;
+}
+
 }
 
 @media only screen and (max-width: 790px) {
@@ -677,6 +681,9 @@ p.padding {
 }
 div.mobileCenter {
     max-width: 100%;
+}
+h3.left_align {
+    text-align: center;
 }
 }
 
