@@ -18,6 +18,12 @@ Index page
 body {
    padding-bottom: 0;
 }
+img.ActiveSlide {
+    max-width: 600px;
+    max-height: 500px;
+    margin: 0 auto;
+    display: block;
+}
 a.noBorder{
 border-style: none;
 }

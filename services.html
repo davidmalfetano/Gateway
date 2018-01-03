@@ -55,8 +55,46 @@
 <!--For LightBox -->
 <script>
  var slides = [];
- 
-function startLightBox() {
+ var slideIndex = 1;
+
+
+
+function startLightBox(box) {
+ switch (box) {
+ case 0: 
+  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
+  childImages[0].src = 'css/images/GatewayImages/IMG_5992.jpg'
+  childImages[1].src = 'css/images/GatewayImages/IMG_7125.jpg'
+  childImages[2].src = 'css/images/GatewayImages/IMG_5718.jpg'
+  break;
+
+  case 1:
+  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
+  childImages[0].src = 'css/images/GatewayImages/IMG_5718.jpg'
+  childImages[1].src = 'css/images/GatewayImages/IMG_7812.jpg'
+  childImages[2].src = 'css/images/GatewayImages/IMG_7599.jpg'
+
+  break;
+
+  case 2:
+  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
+  childImages[0].src = 'css/images/GatewayImages/IMG_7003.jpg'
+  childImages[1].src = 'css/images/GatewayImages/IMG_7006.jpg'
+  childImages[2].src = 'css/images/GatewayImages/IMG_7303.jpg'
+  break;
+
+ }
+  for(var i = 0; i < 3; i++) {
+    slides[i] = childImages[i];
+   console.log(slides[i]);
+  }
+
+
+
+
+
+
+
   var top = ($(window).scrollTop() || $("body").scrollTop());
   var lbBg = document.getElementById("lightBoxBg");
   var lb = document.getElementById("lightBox");
@@ -67,16 +105,9 @@ function startLightBox() {
   lb.style.display   = "block";
 
 
-  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
-  
-   for(var k = 1; k < 4; k++) {
-    childImages[k].className = 'mySlides';
-    slides.push(childImages[k]);
-   }
-}
 
-var slideIndex = 1;
 showSlides(slideIndex);
+}
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -89,16 +120,20 @@ function currentSlide(n) {
 function showSlides(n) {
    
   if(n > slides.length) { 
-    
-    slideIndex = 1}
+    slideIndex = 1;
+  }
 
-  if(n < 1) { slideIndex = slides.length}
+  if(n < 1) { 
+    slideIndex = slides.length;
+  }
 
    for(var i = 0; i < slides.length; i++)
   {
-    slides[i].style.display = "none";
+     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+   slides[slideIndex-1].style.display = 'block';
+   slides[slideIndex-1].style.height = '500px';     // COME BACK TO THIS... NEED TO CHANGE WAY ACTIVE SLIDE IS MANAGED
+    slides[slideIndex-1].style.width = '500px';
 }
 
 
@@ -111,9 +146,8 @@ function dismiss() {
 
   var childImages = document.getElementById('lightBox').getElementsByTagName('img');
   
-   for(var k = 1; k < 4; k++) {
-    childImages[k].className = '';
-    slides.pop();
+   for(var k = 0; k < 3; k++) {
+    slides[k] = '';
    }
 }
 </script>
@@ -164,7 +198,7 @@ function dismiss() {
         <h3 class = "left_align">Wine and Liquor Samplings</h3>
        <p>
         We provide experienced Samplers that do in store and off premise wine and liquor samplings. Our team members set up inviting tables that will draw customers over for a quick taste! Over the last few years we've been able to increase profits for wine and liquor products through these samplings. This is a great way to spark interest for your product!  </p>
-        <p id = "large_font"><a onclick = "startLightBox();currentSlide(1)"> View our Wine and Liquor Samplings &raquo;</a></p>
+        <p id = "large_font"><a onclick = "startLightBox(0);currentSlide(1)"> View our Wine and Liquor Samplings &raquo;</a></p>
 </div>
 
 </div> 
@@ -183,9 +217,11 @@ function dismiss() {
      </div>
     <div id = "inline_lightBox">
     
-    <img  onclick="currentSlide(1)" src = "css/images/GatewayImages/IMG_5992.jpg">
-    <img  onclick="currentSlide(2)" src = "css/images/GatewayImages/IMG_5718.jpg">
-    <img  onclick="currentSlide(3)" src = "css/images/GatewayImages/IMG_7125.jpg">
+    <img>
+    <img>     <!-- Light box 1 -->
+    <img>
+
+
   </div>
     <div id = "nextArrow">
     <a onclick = "plusSlides(1)"><img src = "css/images/rightArrow.png"></a>
@@ -204,7 +240,7 @@ function dismiss() {
  <h3 class = "left_align">Beer Promotions</h3>
       <p>   
        We provide Promotional Models that know how to peak customer interest into your products. Our promotional models are all outgoing and energtic. They have experience doing spends, giveaways and raffels. Here at Gateway Promotions we have the ability to do multiple events at the same time. Our team will have the whole place drinking your product in no time! </p>
-       <p id = "large_font"><a onclick = "startLightBox();currentSlide(1)"> View our Beer Samplings &raquo;</a></p>
+       <p id = "large_font"><a onclick = "startLightBox(1);currentSlide(1)"> View our Beer Samplings &raquo;</a></p>
 </div>
 </div> 
 
@@ -221,9 +257,12 @@ function dismiss() {
     <div id = "prevArrow">
     <a onclick = "plusSlides(-1)"><img src = "css/images/leftArrow.png" id = "leftArrow"></a>
     </div>
-    <img class = "mySlides" onclick="currentSlide(1)" src = "css/images/GatewayImages/IMG_5992.jpg">
-    <img class = "mySlides" onclick="currentSlide(2)" src = "css/images/GatewayImages/IMG_5718.jpg">
-    <img class = "mySlides" onclick="currentSlide(3)" src = "css/images/GatewayImages/IMG_7125.jpg">
+    
+    <img> 
+    <img>       <!-- Light box 2 -->
+    <img>
+
+
      <div id = "nextArrow">
     <a onclick = "plusSlides(1)"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
     </div>
@@ -241,7 +280,7 @@ function dismiss() {
  <h3 class = "left_align">Craft Beer Sampling</h3>
       <p>
         We provide Samplers with a wide range of craft beer knowledge. We have worked closely with Switchback and Sierra Nevada to do tastings all around the Capital Region. We have experience going into Supermarkets and Beverage Centers. The energy and product knowledge really allow the customer to feel excited about trying a new taste! </p>
-      <p id = "large_font"><a onclick = "startLightBox();currentSlide(1)"> View our Craft Beer Samplings &raquo;</a></p>
+      <p id = "large_font"><a onclick = "startLightBox(2);currentSlide(1)"> View our Craft Beer Samplings &raquo;</a></p>
 </div>
 </div> 
 
@@ -262,9 +301,11 @@ function dismiss() {
     <div id = "prevArrow">
     <a onclick = "plusSlides(-1)"><img src = "css/images/leftArrow.png" id = "leftArrow"></a>
     </div>
-    <img class = "mySlides" onclick="currentSlide(1)" src = "css/images/GatewayImages/IMG_7003.jpg">
-    <img class = "mySlides" onclick="currentSlide(2)" src = "css/images/GatewayImages/IMG_7006.jpg">
-    <img class = "mySlides" onclick="currentSlide(3)" src = "css/images/GatewayImages/IMG_7303.JPG">
+    
+    <img>
+    <img>    <!-- Light box 3 -->
+    <img>
+
      <div id = "nextArrow">
     <a onclick = "plusSlides(1)"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
     </div>
