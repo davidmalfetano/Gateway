@@ -580,14 +580,14 @@ div.services_content {
     max-width: 100%;
 }
 #prevArrow {
-    left: 8%;
+    left: 4%;
 }
 #nextArrow {
-    right: 8%;
+    right: 4%;
 }
 
 #closeBox {
-    right: 8%;
+    right: 6%;
 }
 div.social {
     right: 15px;
@@ -697,6 +697,7 @@ h3.left_align {
  }
  img.slides {
      max-height: 85%;
+     max-width: 60%;
 }
 }
 
