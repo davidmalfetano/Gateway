@@ -18,12 +18,7 @@ Index page
 body {
    padding-bottom: 0;
 }
-img.ActiveSlide {
-    max-width: 600px;
-    max-height: 500px;
-    margin: 0 auto;
-    display: block;
-}
+
 a.noBorder{
 border-style: none;
 }
@@ -176,6 +171,7 @@ font-size: 18px;
 #lightBox {
     margin: 0 auto;
     width: 100%;
+    height: 50%;
     position: absolute;
     top: 25%;
     display: none;
@@ -192,18 +188,26 @@ p.closeBox:hover {
     text-decoration: underline;
 }
 
-.mySlides {
+ img.hidden {
     display: none;
 }
- #inline_lightBox img{
-    display: inline-block;
+img.slides {
+     display: inline-block;
      margin: auto;
      max-width: 45%;
-     max-height: 45%;
- }
+     max-height: 100%;
+}
  #inline_lightBox {
     width: 100%;
+    max-height: 100%;
     display: inline-block;
+    margin: 0 auto;
+ }
+ #inline_lightBox img {
+    left: 25%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
  }
 
 #slideList {
@@ -522,16 +526,16 @@ div.mobileCenter {
 #nextArrow {
     right: 8%;
 }
-#inline_lightBox img {
-    max-width: 50%;
-    max-height: 50%;
-}
+
 #closeBox {
     right: 8%;
 }
 
 a.footer {
     font-size: 90%;
+}
+img.slides {
+     max-width: 50%;
 }
 }
 
@@ -581,10 +585,7 @@ div.services_content {
 #nextArrow {
     right: 8%;
 }
-#inline_lightBox img {
-    max-width: 60%;
-    max-height: 60%;
-}
+
 #closeBox {
     right: 8%;
 }
@@ -690,6 +691,12 @@ div.mobileCenter {
 }
 h3.left_align {
     text-align: center;
+}
+ #inline_lightBox img {
+    left: 20%;
+ }
+ img.slides {
+     max-height: 85%;
 }
 }
 

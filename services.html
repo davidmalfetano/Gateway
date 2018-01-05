@@ -11,18 +11,12 @@
     <meta name="author" content="">
     <link href= "https://fonts.googleapis.com/css?family=Corben:bold%7CNobile" rel= "stylesheet" type= "text/css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="images/icon.png" type="image/gif">
+    <link rel="icon" href="css/images/icon.png" type="image/gif">
 
     <title>Gateway Promotions</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type = "text/css">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/workAround.css" rel="stylesheet" type = "text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/fixedNavBar.css" rel="stylesheet" type = "text/css">
     
     <!-- Custom styles for carousel -->
     <link href="css/carousel.css" rel="stylesheet" type = "text/css">
@@ -54,45 +48,34 @@
 </script>
 <!--For LightBox -->
 <script>
- var slides = [];
- var slideIndex = 1;
 
-
+ var slideIndex;
 
 function startLightBox(box) {
+
+slideIndex = 0;
+childImages = document.getElementById('lightBox').getElementsByClassName('slides');
+
  switch (box) {
  case 0: 
-  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
-  childImages[0].src = 'css/images/GatewayImages/IMG_5992.jpg'
-  childImages[1].src = 'css/images/GatewayImages/IMG_7125.jpg'
-  childImages[2].src = 'css/images/GatewayImages/IMG_5718.jpg'
+  childImages[0].src = 'css/images/GatewayImages/IMG_5992.JPG'
+  childImages[1].src = 'css/images/GatewayImages/IMG_7125.JPG'
+  childImages[2].src = 'css/images/GatewayImages/IMG_5718.JPG'
   break;
 
   case 1:
-  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
-  childImages[0].src = 'css/images/GatewayImages/IMG_5718.jpg'
-  childImages[1].src = 'css/images/GatewayImages/IMG_7812.jpg'
-  childImages[2].src = 'css/images/GatewayImages/IMG_7599.jpg'
-
+  childImages[0].src = 'css/images/GatewayImages/IMG_5718.JPG'
+  childImages[1].src = 'css/images/GatewayImages/IMG_7812.JPG'
+  childImages[2].src = 'css/images/GatewayImages/IMG_7599.JPG'
   break;
 
   case 2:
-  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
-  childImages[0].src = 'css/images/GatewayImages/IMG_7003.jpg'
+  childImages[0].src = 'css/images/GatewayImages/IMG_7402.JPG'
   childImages[1].src = 'css/images/GatewayImages/IMG_7006.jpg'
-  childImages[2].src = 'css/images/GatewayImages/IMG_7303.jpg'
+  childImages[2].src = 'css/images/GatewayImages/IMG_7302.JPG'
   break;
 
  }
-  for(var i = 0; i < 3; i++) {
-    slides[i] = childImages[i];
-   console.log(slides[i]);
-  }
-
-
-
-
-
 
 
   var top = ($(window).scrollTop() || $("body").scrollTop());
@@ -109,31 +92,34 @@ function startLightBox(box) {
 showSlides(slideIndex);
 }
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides() {
+  if(slideIndex < childImages.length-1) 
+      slideIndex++;
+    
+
+else { slideIndex = 0; }
+
+  showSlides();
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function minusSlides() {
+  if(slideIndex > 0)
+    slideIndex--;
+
+  else { slideIndex = 2; }
+
+  showSlides();
 }
 
-function showSlides(n) {
-   
-  if(n > slides.length) { 
-    slideIndex = 1;
-  }
 
-  if(n < 1) { 
-    slideIndex = slides.length;
-  }
-
-   for(var i = 0; i < slides.length; i++)
+function showSlides() {
+    
+   for(var i = 0; i < childImages.length; i++)
   {
-     slides[i].style.display = "none";
+     childImages[i].className = 'slides hidden';
   }
-   slides[slideIndex-1].style.display = 'block';
-   slides[slideIndex-1].style.height = '500px';     // COME BACK TO THIS... NEED TO CHANGE WAY ACTIVE SLIDE IS MANAGED
-    slides[slideIndex-1].style.width = '500px';
+  childImages[slideIndex].className = 'slides';
+
 }
 
 
@@ -144,10 +130,9 @@ function dismiss() {
   lbBg.style.display = "none";
   lb.style.display   = "none";
 
-  var childImages = document.getElementById('lightBox').getElementsByTagName('img');
   
-   for(var k = 0; k < 3; k++) {
-    slides[k] = '';
+   for(var k = 0; k < childImages.length; k++) {
+    childImages[k] = '';
    }
 }
 </script>
@@ -198,7 +183,7 @@ function dismiss() {
         <h3 class = "left_align">Wine and Liquor Samplings</h3>
        <p>
         We provide experienced Samplers that do in store and off premise wine and liquor samplings. Our team members set up inviting tables that will draw customers over for a quick taste! Over the last few years we've been able to increase profits for wine and liquor products through these samplings. This is a great way to spark interest for your product!  </p>
-        <p id = "large_font"><a onclick = "startLightBox(0);currentSlide(1)"> View our Wine and Liquor Samplings &raquo;</a></p>
+        <p id = "large_font"><a onclick = "startLightBox(0)"> View our Wine and Liquor Samplings &raquo;</a></p>
 </div>
 
 </div> 
@@ -206,25 +191,28 @@ function dismiss() {
 
 <div id = "lightBoxBg" onclick = "dismiss()">
   </div>
+
+
   <div id = "lightBox">
+
     <div id = "closeBox">
     <a onclick = "dismiss()">
     <p class = "closeBox"> Close </p>
     </a>
   </div>
-    <div id = "prevArrow">
-    <a onclick = "plusSlides(-1)"><img src = "css/images/leftArrow.png"></a>
-     </div>
+
+  <div id = "prevArrow">
+    <a onclick = "minusSlides()"><img src = "css/images/leftArrow.png"></a>
+     </div>    
+
     <div id = "inline_lightBox">
-    
-    <img>
-    <img>     <!-- Light box 1 -->
-    <img>
-
-
+    <img class = 'slides'>
+    <img class = 'slides'>     <!-- Light box 1 -->
+    <img class = 'slides'>
   </div>
+
     <div id = "nextArrow">
-    <a onclick = "plusSlides(1)"><img src = "css/images/rightArrow.png"></a>
+    <a onclick = "plusSlides()"><img src = "css/images/rightArrow.png"></a>
     </div>
 
 
@@ -240,7 +228,7 @@ function dismiss() {
  <h3 class = "left_align">Beer Promotions</h3>
       <p>   
        We provide Promotional Models that know how to peak customer interest into your products. Our promotional models are all outgoing and energtic. They have experience doing spends, giveaways and raffels. Here at Gateway Promotions we have the ability to do multiple events at the same time. Our team will have the whole place drinking your product in no time! </p>
-       <p id = "large_font"><a onclick = "startLightBox(1);currentSlide(1)"> View our Beer Samplings &raquo;</a></p>
+       <p id = "large_font"><a onclick = "startLightBox(1)"> View our Beer Samplings &raquo;</a></p>
 </div>
 </div> 
 
@@ -255,16 +243,16 @@ function dismiss() {
   </div>
     <div id = "inline_lightBox">
     <div id = "prevArrow">
-    <a onclick = "plusSlides(-1)"><img src = "css/images/leftArrow.png" id = "leftArrow"></a>
+    <a onclick = "minusSlides()"><img src = "css/images/leftArrow.png" id = "leftArrow"></a>
     </div>
     
-    <img> 
-    <img>       <!-- Light box 2 -->
-    <img>
+    <img class = 'slides'> 
+    <img class = 'slides'>       <!-- Light box 2 -->
+    <img class = 'slides'>
 
 
      <div id = "nextArrow">
-    <a onclick = "plusSlides(1)"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
+    <a onclick = "plusSlides()"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
     </div>
   </div>
 
@@ -280,7 +268,7 @@ function dismiss() {
  <h3 class = "left_align">Craft Beer Sampling</h3>
       <p>
         We provide Samplers with a wide range of craft beer knowledge. We have worked closely with Switchback and Sierra Nevada to do tastings all around the Capital Region. We have experience going into Supermarkets and Beverage Centers. The energy and product knowledge really allow the customer to feel excited about trying a new taste! </p>
-      <p id = "large_font"><a onclick = "startLightBox(2);currentSlide(1)"> View our Craft Beer Samplings &raquo;</a></p>
+      <p id = "large_font"><a onclick = "startLightBox(2)"> View our Craft Beer Samplings &raquo;</a></p>
 </div>
 </div> 
 
@@ -299,15 +287,15 @@ function dismiss() {
 <!--Craft Beer -->
 
     <div id = "prevArrow">
-    <a onclick = "plusSlides(-1)"><img src = "css/images/leftArrow.png" id = "leftArrow"></a>
+    <a onclick = "plusSlides()"><img src = "css/images/leftArrow.png" id = "leftArrow"></a>
     </div>
     
-    <img>
-    <img>    <!-- Light box 3 -->
-    <img>
+    <img class = 'slides'>
+    <img class = 'slides'>    <!-- Light box 3 -->
+    <img class = 'slides'>
 
      <div id = "nextArrow">
-    <a onclick = "plusSlides(1)"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
+    <a onclick = "minusSlides()"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
     </div>
   </div>
 
