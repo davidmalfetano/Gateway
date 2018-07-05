@@ -46,7 +46,8 @@ h3.left_align {
 div#color.container {
 	background-color: #0f006f;
     border-color: #030033;
-  
+
+  }
 
 .navbar {
   margin: 0px 0;
@@ -298,13 +299,10 @@ p.fontI{
     font-weight: bold;
     line-height: 40px;
     text-align: center;
-    text-color: white;
     margin: 0 auto;
     max-width: 90%;
 
-
 }
-
 
 
 #lessPadding{ 
@@ -619,10 +617,7 @@ div.hero-image, div.hero-image2 {
    height: 70%;
    width: 95%;
 }
-p.fontI {
-    font-size: 94%;
-  
-}
+
 ul.footer {
     display: none;
 }
@@ -671,12 +666,7 @@ text-align: center;
 max-width: 90%;
 
 }
-img#firstImage {
-   margin-right: 0;
-   margin-left: 0;
-   float: none;
-   display: inline-block;
-}
+
 div.services_content {
 max-width: 100%;
 text-align: center;
@@ -697,9 +687,7 @@ img.float_right {
     float: none;
     margin-top: 25px; /* Add this to align title with image */
 }
-p.padding {
-    text-align: center;
-}
+
 div.mobileCenter {
     max-width: 100%;
 }
