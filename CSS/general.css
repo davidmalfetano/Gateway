@@ -318,6 +318,7 @@ div.jumbotron{
     resize: both;
     overflow: auto;
     color:  #000000;
+    background-color: #A9A9A9;
 }
 div#services {
     padding-top: 0px;
