@@ -256,7 +256,7 @@ div.hero-image2 {
 img#firstImage {
     border-radius: 25px;
     margin-bottom: 200 px;
-    border: 20px solid transparent;
+    border: 5px solid transparent;
     border-color: #EA6A41
 }
 img.float_left {
@@ -296,11 +296,13 @@ p.fontI{
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    line-height: 20px;
+    line-height: 40px;
     text-align: center;
     text-color: white;
     margin: 0 auto;
     max-width: 90%;
+
+
 }
 
 
@@ -369,6 +371,14 @@ div.footer{
     height: 100px;
     width: 100%;
     position: relative;
+    margin-top: 0px;
+}
+div.footerIndex{
+    background-color: #000000;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
 }
 div.footer_nav {
     color: white;
@@ -450,16 +460,19 @@ a.nav:hover::before, a:focus::before {
 
 
 p.center{
-
+  
   text-align: center;
+
 
 }
 p.padding{
-
+    text-align: center;
     padding: 10px;
+    line-height: 60px;
 }
 .browse-pages {
     padding: 0 0 0 0;
+    overflow: hidden;
 }
 
 
@@ -608,6 +621,7 @@ div.hero-image, div.hero-image2 {
 }
 p.fontI {
     font-size: 94%;
+  
 }
 ul.footer {
     display: none;
