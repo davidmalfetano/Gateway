@@ -42,7 +42,15 @@ font-family: 'Dosis', sans-serif;
 h3.left_align {
     text-align: left;
 }
+h5{
 
+text-align:left;
+font-family: "Times New Roman", Times, serif;
+font-size: 20px;
+font-color: black;
+
+
+}
 div#color.container {
 	background-color: #0f006f;
     border-color: #030033;
@@ -79,7 +87,7 @@ div#noPadding.jumbotron{
 background-color: #F9B533;
     padding:0;
     margin:0;
-     text-align: center
+    text-align: center;
 }
 
 
@@ -320,6 +328,18 @@ div.jumbotron{
     color:  #000000;
     background-color: #A9A9A9;
 }
+div.contact{ 
+     padding:10px;
+
+    resize: both;
+    overflow: auto;
+    color:  #000000;
+    background-color: #A9A9A9;
+}
+
+
+
+
 div#services {
     padding-top: 0px;
     padding-bottom: 20px;
@@ -474,7 +494,7 @@ p.center{
 p.padding{
     padding: 10px;
     line-height: 60px;
-    text-align: center;
+    text-align: justify;
 }
 .browse-pages {
     padding: 0 0 0 0;
