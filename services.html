@@ -58,22 +58,43 @@ childImages = document.getElementById('lightBox').getElementsByClassName('slides
 
  switch (box) {
  case 0: 
-  childImages[0].src = 'css/images/GatewayImages/IMG_5992.JPG'
-  childImages[1].src = 'css/images/GatewayImages/IMG_7125.JPG'
-  childImages[2].src = 'css/images/GatewayImages/IMG_5718.JPG'
+  childImages[0].src = 'css/images/GatewayImages/Brenna_Molly.jpg'
+  childImages[1].src = 'css/images/GatewayImages/IMG_5992.JPG'
+  childImages[2].src = 'css/images/GatewayImages/Frank_Girls.jpg'
+  childImages[3].src = 'css/images/GatewayImages/IMG_7125.JPG'
+  childImages[4].src = 'css/images/GatewayImages/IMG_5718.JPG'
+  childImages[5].src = 'css/images/GatewayImages/IMG_7560.JPG'
+  childImages[6].src = 'css/images/GatewayImages/IMG_5999.JPG'
+  childImages[7].src = 'css/images/GatewayImages/IMG_5911.JPG'
+
+  childImages[8].src = 'css/images/GatewayImages/dualPic4.png'
+ 
+  
 
   break;
 
   case 1:
-  childImages[0].src = 'css/images/GatewayImages/IMG_5718.JPG'
-  childImages[1].src = 'css/images/GatewayImages/IMG_7812.JPG'
-  childImages[2].src = 'css/images/GatewayImages/IMG_7599.JPG'
+  childImages[0].src = 'css/images/GatewayImages/dualPic.png'
+  childImages[1].src = 'css/images/GatewayImages/IMG_7190.PNG'
+  childImages[2].src = 'css/images/GatewayImages/IMG_6652.jpg'
+  childImages[3].src = 'css/images/GatewayImages/IMG_6763.PNG'
+  childImages[4].src = 'css/images/GatewayImages/IMG_7009.jpg'
+
+  childImages[5].src = 'css/images/GatewayImages/IMG_7185.JPG'
+  childImages[6].src = 'css/images/GatewayImages/IMG_7451.JPG'
+  childImages[7].src = 'css/images/GatewayImages/IMG_7402.JPG'
+  childImages[8].src = 'css/images/GatewayImages/dualPic3.png'
+
+
   break;
 
   case 2:
-  childImages[0].src = 'css/images/GatewayImages/IMG_7402.JPG'
+  childImages[0].src = 'css/images/GatewayImages/dualPic2.png'
   childImages[1].src = 'css/images/GatewayImages/IMG_7006.jpg'
   childImages[2].src = 'css/images/GatewayImages/IMG_8666.JPG'
+  childImages[3].src = 'css/images/GatewayImages/IMG_6652.jpg'
+  childImages[4].src = 'css/images/GatewayImages/IMG_7814.JPG'
+
   break;
 
  }
@@ -107,7 +128,7 @@ function minusSlides() {
   if(slideIndex > 0)
     slideIndex--;
 
-  else { slideIndex = 2; }
+  else { slideIndex = 8; } //this should be largest # in array not amount of elements -->
 
   showSlides();
 }
@@ -208,9 +229,17 @@ function dismiss() {
 
     <div id = "inline_lightBox">
     <img class = 'slides'>
-    <img class = 'slides'>     <!-- Light box 1 -->
+    <img class = 'slides'>     <!-- Light box 1 ..To add also add here-->
     <img class = 'slides'>
-     <img class = 'slides'>
+    <img class = 'slides'>
+    <img class = 'slides'>
+    <img class = 'slides'>
+
+    <img class = 'slides'> 
+    <img class = 'slides'> 
+    <img class = 'slides'> 
+
+  
   </div>
 
     <div id = "nextArrow">
@@ -235,7 +264,7 @@ function dismiss() {
 </div> 
 
 
-<div id = "lightBoxBg" onclick = "dismiss()">
+<div id = "lightBoxBg lightBoxBg2" onclick = "dismiss()">
   </div>
   <div id = "lightBox">
     <div id = "closeBox">
@@ -251,6 +280,13 @@ function dismiss() {
     <img class = 'slides'> 
     <img class = 'slides'>       <!-- Light box 2 -->
     <img class = 'slides'>
+    <img class = 'slides'>       <!-- Light box 2 -->
+    <img class = 'slides'>
+    <img class = 'slides'>
+
+    <img class = 'slides'> 
+     <img class = 'slides'> 
+
 
 
      <div id = "nextArrow">
@@ -295,6 +331,8 @@ function dismiss() {
     <img class = 'slides'>
     <img class = 'slides'>    <!-- Light box 3 -->
     <img class = 'slides'>
+     <img class = 'slides'>    <!-- Light box 3 -->
+    <img class = 'slides'>
 
      <div id = "nextArrow">
     <a onclick = "minusSlides()"><img src = "css/images/rightArrow.png" id = "rightArrow" ></a>
@@ -321,7 +359,7 @@ function dismiss() {
             <li class = "footer"><a class = "footer" href="about.html">ABOUT US</a></li>
             <li class = "footer"><a class = "footer" href="contact.html">CONTACT</a></li>
             <li class = "footer"><a class = "footer" href="services.html">SERVICES</a></li>
-            <li class = "footer"><a class = "footer" href="Current.html">CURRENT EMPLOYEES</a></li>
+            <li class = "footer"><a class = "footer" href="current.html">CURRENT EMPLOYEES</a></li>
           </ul>
           
         </div><!--footer_nav -->
